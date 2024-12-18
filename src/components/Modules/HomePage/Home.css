@@ -1,0 +1,88 @@
+/* Home Page Container */
+.home_page_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* User Card Container */
+.user_card_container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+/* User Image Container */
+.user_image_container {
+  position: relative;
+  margin: -25px 10px 0; /* Negative top margin to pull the image out */
+  padding: 0; /* Removes padding */
+}
+
+.user_image {
+  width: calc(100% + 20px); /* Extends the width to compensate for the gap */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px; /* Optional rounded corners */
+}
+
+/* Action Buttons */
+.user_action_buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6c63ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Content Section */
+.user_content {
+  padding: 16px;
+}
+
+.user_name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.user_presentation {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.user_footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777;
+}
