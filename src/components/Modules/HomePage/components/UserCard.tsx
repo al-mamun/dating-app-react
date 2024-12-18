@@ -1,4 +1,3 @@
-import { SlLocationPin } from "react-icons/sl";
 import "../Home.css";
 import { FaUserPlus } from "react-icons/fa";
 
@@ -14,8 +13,6 @@ const UserCard = ({
   image,
   name,
   presentation,
-  location,
-  price,
 }: UserCardProps) => {
   return (
     <div className="user_card_container">
