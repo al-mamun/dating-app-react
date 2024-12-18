@@ -11,6 +11,8 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .user_card_container {
   display: flex;
