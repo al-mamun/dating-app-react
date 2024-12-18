@@ -1,7 +1,7 @@
 import UserCard from "./components/UserCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, A11y } from "swiper/modules";
-import "swiper/css";
+declare module 'swiper/modules';
 
 import {
   Breadcrumb,
