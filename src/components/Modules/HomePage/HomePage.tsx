@@ -1,7 +1,7 @@
 import UserCard from "./components/UserCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, A11y } from "swiper/modules";
-declare module 'swiper/modules';
+declare module "swiper/modules";
 
 import {
   Breadcrumb,
@@ -12,6 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import "./Home.css";
+import { MdMenuOpen } from "react-icons/md";
 
 const HomePage = () => {
   const users = [
@@ -75,23 +76,29 @@ const HomePage = () => {
     <div className="home_page_container">
       {/* Breadcrumb */}
       <div className="w-full z-50 sticky top-0 backdrop-blur-md bg-opacity-30 flex justify-center p-4 mx-auto">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage className="font-bold">Analytics</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <div className="flex justify-between w-full max-w-7xl">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage className="font-bold">Analytics</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <div>
+            <MdMenuOpen size={30} />
+          </div>
+        </div>
       </div>
 
       {/* User Cards */}
       <div className="swiper_wrapper">
         <Swiper
           modules={[Mousewheel, A11y]}
+          speed={700} 
           spaceBetween={0}
           slidesPerView={1}
           direction="vertical"
