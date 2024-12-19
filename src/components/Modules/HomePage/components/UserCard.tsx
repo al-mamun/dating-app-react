@@ -3,26 +3,28 @@ import { FaCalendarAlt, FaHeart } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 
 interface UserCardProps {
-  image: string;
+  user_id: number;
   name: string;
-  presentation: string;
-  location: string;
-  price: string;
+  mobile: string;
+  bio: string;
+  gender: "male" | "female" | "other"; // Assuming these are the possible values for gender
+  status: "active" | "inactive"; // Assuming these are the possible values for status
+  avatar: string;
 }
 
-const UserCard = ({ image, name, presentation }: UserCardProps) => {
+const UserCard = ({ avatar, name, bio }: UserCardProps) => {
   return (
     <div className="user_card">
-      <div className="user_card_container">
+      <div className="user_card_container w-full">
         {/* Picture */}
         <div className="user_image_container">
-          <img src={image} alt={name} className="user_image" />
+          <img src={avatar} alt={name} className="user_image" />
         </div>
 
         {/* Content Section */}
         <div className="user_content relative">
           <h3 className="user_name">{name}</h3>
-          <p className="user_presentation">{presentation}</p>
+          <p className="user_presentation line-clamp-2">{bio}</p>
           {/* <hr className="my-2" /> */}
           <div className="user_footer absolute bottom-10 left-0 right-0">
             {/* Action Buttons */}

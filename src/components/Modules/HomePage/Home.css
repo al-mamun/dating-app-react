@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
 /* User Card Container */
@@ -17,7 +16,7 @@
 .user_card_container {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   border-radius: 16px;
   background-color: #fff;
@@ -34,7 +33,7 @@
 
 .user_image {
   width: calc(100% + 20px); /* Extends the width to compensate for the gap */
-  height: 40vh;
+  height: 45vh;
   object-fit: cover;
   border-radius: 12px; /* Optional rounded corners */
 }
@@ -44,13 +43,13 @@
   bottom: 10px;
   display: flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
 }
 
 .btn {
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   background-color: #6c63ff;
   color: white;

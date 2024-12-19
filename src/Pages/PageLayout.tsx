@@ -37,12 +37,12 @@ const sidebarMenuItems: SidebarMenuItemProps[] = [
   {
     name: "My Matches",
     icon: <MdSportsSoccer />,
-    to: "/matches",
+    to: "/my-matches",
   },
   {
     name: "My Invites",
     icon: <BsFillEnvelopeFill />,
-    to: "/invites",
+    to: "/my-invites",
   },
   // {
   //   name: "Exit",
@@ -77,7 +77,7 @@ const PageLayout = () => {
                 name={item.name}
                 icon={item.icon}
                 onClick={() => {
-                  item.name == "Exit" && setOpen(false);
+                  setOpen(false);
                 }}
               />
             );
