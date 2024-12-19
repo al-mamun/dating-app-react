@@ -3,16 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, A11y } from "swiper/modules";
 declare module "swiper/modules";
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import "./Home.css";
-import { MdMenuOpen } from "react-icons/md";
 
 const HomePage = () => {
   const users = [
@@ -74,25 +64,7 @@ const HomePage = () => {
 
   return (
     <div className="home_page_container">
-      {/* Breadcrumb */}
-      <div className="w-full z-50 sticky top-0 backdrop-blur-md bg-opacity-30 flex justify-center p-4 mx-auto">
-        <div className="flex justify-between w-full max-w-7xl">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage className="font-bold">Analytics</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <div>
-            <MdMenuOpen size={30} />
-          </div>
-        </div>
-      </div>
+  
 
       {/* User Cards */}
       <div className="swiper_wrapper">

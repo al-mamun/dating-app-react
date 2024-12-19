@@ -1,7 +1,7 @@
-import AppRouter from "./AppRouter";
+import PageLayout from "./Pages/PageLayout";
 
 function App() {
-  return <AppRouter />;
+  return <PageLayout />;
 }
 
 export default App;

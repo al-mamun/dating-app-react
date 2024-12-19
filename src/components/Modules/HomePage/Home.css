@@ -7,7 +7,7 @@
 }
 
 /* User Card Container */
-.user_card{
+.user_card {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -18,17 +18,16 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 16px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
-  height: 60vh;
+  height: 70vh;
 }
 
 /* User Image Container */
 .user_image_container {
-  position: relative;
   margin: -25px 10px 0; /* Negative top margin to pull the image out */
   padding: 0; /* Removes padding */
 }
@@ -42,12 +41,11 @@
 
 /* Action Buttons */
 .user_action_buttons {
-  position: absolute;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn {
@@ -73,6 +71,7 @@
 /* Content Section */
 .user_content {
   padding: 16px;
+  height: 100%;
 }
 
 .user_name {
