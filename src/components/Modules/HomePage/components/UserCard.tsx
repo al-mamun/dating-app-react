@@ -1,5 +1,6 @@
 import "../Home.css";
-import { FaUserPlus } from "react-icons/fa";
+import { FaCalendarAlt, FaHeart } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
 
 interface UserCardProps {
   image: string;
@@ -26,10 +27,14 @@ const UserCard = ({ image, name, presentation }: UserCardProps) => {
           <div className="user_footer absolute bottom-10 left-0 right-0">
             {/* Action Buttons */}
             <div className="user_action_buttons">
-              <button className="btn like">👍</button>
-              <button className="btn check">✔</button>
+              <button className="btn like">
+                <FaHeart size={20} />
+              </button>
+              <button className="btn check">
+                <FaCalendarAlt size={20} />
+              </button>
               <button className="btn invite">
-                <FaUserPlus size={20} />
+                <FaSquareInstagram size={20} />
               </button>
             </div>
           </div>

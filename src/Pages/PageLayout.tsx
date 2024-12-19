@@ -44,15 +44,15 @@ const sidebarMenuItems: SidebarMenuItemProps[] = [
     icon: <BsFillEnvelopeFill />,
     to: "/invites",
   },
-  {
-    name: "Exit",
-    icon: <FaSignOutAlt />,
-    to: "/logout",
-  },
+  // {
+  //   name: "Exit",
+  //   icon: <FaSignOutAlt />,
+  //   to: "/",
+  // },
 ];
 
 const PageLayout = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <SidebarProvider open={open} onOpenChange={setOpen}>
@@ -76,9 +76,22 @@ const PageLayout = () => {
                 to={item.to}
                 name={item.name}
                 icon={item.icon}
+                onClick={() => {
+                  item.name == "Exit" && setOpen(false);
+                }}
               />
             );
           })}
+          <SidebarCustomMenuItem
+            to={"/"}
+            name={"Exit"}
+            icon={<FaSignOutAlt />}
+            navLinkClassName="bg-transparent"
+            isApplyActive={false}
+            onClick={() => {
+              setOpen(false);
+            }}
+          />
         </div>
       </aside>
 
